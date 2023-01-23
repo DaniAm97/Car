@@ -1,0 +1,55 @@
+U cant start the engine beacuse the gear is not 0 2023-01-22 11:53:56.095685
+The engine is off u should turn it up 2023-01-22 11:56:45.734304
+u cant stop the car while driving 2023-01-22 11:59:04.134929
+u cant stop the car while driving 2023-01-22 12:05:09.407975
+U cant start the engine beacuse the gear is not 0 2023-01-22 12:19:47.952450
+Passed(test_start_engine): with Parameters None,True 2023-01-22 19:14:18.346861
+Passed(test_set_gear): with Parameters 2,2 2023-01-22 19:20:45.569916
+Passed(test_get_gear): with Parameters 0,0 2023-01-22 19:23:02.935608
+Passed(test_get_speed_car): with Parameters 2,60 2023-01-22 19:26:12.915378
+Passed(test_if_drive_destination_is_posible): with Parameters <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x00000160827E9CD0>>,True 2023-01-22 19:37:46.624394
+Passed(test_set_gear): with Parameters 2,3 2023-01-22 19:39:54.937526
+Passed(test_get_speed_car): with Parameters 2,90 2023-01-22 19:47:48.301897
+Passed(test_start_engine): with Parameters None,True 2023-01-22 19:59:51.073489
+Passed(test_get_speed_car): with Parameters60 2023-01-22 20:38:10.183716
+Passed(test_get_speed_car): with Parameters70 2023-01-22 20:38:25.159142
+Passed(test_get_speed_car): with Parameters60 2023-01-22 20:39:09.509004
+Passed(test_start_engine): with Parameters ,False 2023-01-22 20:40:20.310967
+Passed(test_start_engine) 2023-01-22 20:43:24.546070
+Failed (test_start_engine): True != False 2023-01-22 20:43:48.001604
+Failed (test_get_speed_car): 60 != 80 2023-01-22 20:45:13.128012
+Passed(test_start_engine): 2023-01-22 20:46:22.846022
+Failed (test_start_engine): assert True == False
+ +  where True = <car.Car object at 0x0000017FC89962E0>.status_engine 2023-01-22 20:46:39.250203
+Failed (test_if_drive_destination_is_posible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001B5EAD47AF0>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001B5EAD47AF0>> = <car.Car object at 0x000001B5EAD47AF0>.if_drive_destination_is_posible 2023-01-22 20:50:59.910185
+Failed (test_set_gear): assert 2 == 3
+ +  where 2 = <bound method Car.get_gear of <car.Car object at 0x0000024C6E39A040>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x0000024C6E39A040>> = <car.Car object at 0x0000024C6E39A040>.get_gear 2023-01-22 20:52:53.204118
+Failed (test_get_gear): assert 0 == 1
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x000002D74C609310>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000002D74C609310>> = <car.Car object at 0x000002D74C609310>.get_gear 2023-01-22 20:53:31.693872
+Passed(test_set_gear): 2023-01-22 21:32:34.249421
+Failed (test_set_gear): assert 2 == 3
+ +  where 2 = <bound method Car.get_gear of <car.Car object at 0x000001B4918EA2B0>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000001B4918EA2B0>> = <car.Car object at 0x000001B4918EA2B0>.get_gear 2023-01-22 21:32:52.195157
+Passed(test_start_engine) 2023-01-22 21:33:06.397475
+Passed(test_set_gear): 2023-01-22 21:34:07.572405
+Failed (test_start_engine): assert True == False
+ +  where True = <car.Car object at 0x000001B411AA2310>.status_engine 2023-01-22 21:48:18.107554
+Passed(test_get_gear):  2023-01-22 21:58:00.173029
+Passed(test_get_speed_car): 2023-01-22 21:58:00.178038
+Passed(test_if_drive_destination_is_posible): 2023-01-22 21:58:00.181559
+Passed(test_set_gear): 2023-01-22 21:58:00.185582
+Passed(test_start_engine) 2023-01-22 21:58:00.188596
+Passed(test_fuel_to_buy): 2023-01-22 21:59:28.658302
+Failed (test_if_drive_destination_is_posible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001CD9FE81B50>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001CD9FE81B50>> = <car.Car object at 0x000001CD9FE81B50>.if_drive_destination_is_posible 2023-01-22 21:59:43.976484
+Failed (test_get_gear): assert 0 == 1
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x00000236DD609310>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x00000236DD609310>> = <car.Car object at 0x00000236DD609310>.get_gear 2023-01-23 09:36:33.596642
+Passed(test_stop_engine): 2023-01-23 09:38:14.000394
+Passed(test_start_engine): 2023-01-23 09:43:59.302693
+Passed(test_start_engine): 2023-01-23 09:51:58.360040
