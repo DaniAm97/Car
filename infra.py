@@ -1,8 +1,8 @@
 import datetime as dt
 import os
-import dotenv
+from dotenv import load_dotenv
 
-dotenv.load_dotenv()
+load_dotenv()
 
 
 def write_to_log(str):

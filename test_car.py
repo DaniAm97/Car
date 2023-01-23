@@ -23,7 +23,7 @@ def test_start_engine(car):
         assert car.status_engine == True
         car.write_to_log(f'Passed(test_start_engine):')
     except AssertionError as ae:
-       car.write_to_log(f'Failed (test_start_engine): {ae}')
+        car.write_to_log(f'Failed (test_start_engine): {ae}')
 
 
 def test_start_engine_should_fail(car):
@@ -58,7 +58,7 @@ def test_set_gear(car):
         assert car.get_gear() == 2
         car.write_to_log(f'Passed(test_set_gear):')
     except AssertionError as ae:
-        car.write_to_log(f'Failed (test_set_gear): {ae}')
+        car.write_to_log(f"Failed (test_set_gear):  {ae}")
 
 
 def test_set_gear_should_Fail(car):
@@ -145,6 +145,7 @@ def test_get_speed_car_should_fail(car):
         car.write_to_log(f'Failed (test_get_speed_car): {ae}')
 
 
+@pytest.mark.one
 def test_stop_engine(car):
     """
      :name : Dani

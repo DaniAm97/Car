@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
     def test_start_engine(self):
         try:
             self.x.start_engine()
-            self.assertEqual(self.x.status_engine, True)
+            self.assertEqual(self.x.start_engine(), True)
             self.x.write_to_log(f'Passed(test_start_engine)')
         except AssertionError as ae:
             self.x.write_to_log(f'Failed (test_start_engine): {ae}')
@@ -41,8 +41,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_stop_engine(self):
         try:
-
-            self.assertEqual(self.x.status_engine(), False)
+            self.x.stop_engine()
+            self.assertEqual(self.x.get_status_engine(), False)
             self.x.write_to_log(f"Passed(test_stop_engine): ")
         except AssertionError as ae:
             self.x.write_to_log(f'Failed (test_stop_engine): {ae}')

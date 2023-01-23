@@ -1,11 +1,10 @@
 import datetime as dt
 import os
-import dotenv
 from dotenv import load_dotenv
 
 
 class Car:
-    dotenv.load_dotenv()
+    load_dotenv()
 
     def __init__(self):
         self.feul = int(os.getenv('FEUL'))
@@ -26,11 +25,31 @@ class Car:
         self.status_engine = True
         self.gear = 0
 
+    def get_start_engine(self):
+        return self.status_engine
+
+    def get_status_engine(self):
+        return self.status_engine
+
+    def set_fuel(self,fuel):
+        self.feul =fuel
+
+    def get_fuel(self):
+        return self.feul
+
     def set_gear(self, gear):
-        self.gear = gear
+        if gear > 6:
+            raise OverflowError(os.getenv('OVERFLOW_ERROR1'))
+        elif gear < 0:
+            raise OverflowError(os.getenv('OVERFLOW_ERROR2'))
+        else:
+            self.gear = gear
 
     def get_gear(self):
         return self.gear
+
+    def get_feul(self):
+        return self.feul
 
     def get_car_speed(self):
         """
@@ -53,6 +72,29 @@ class Car:
               """
         self.status_engine = False
         self.gear = 0
+    def get_feul_per_km(self):
+        return self.feulPerMile
+
+    def drive(self,km_to_drive):
+        """
+        :name: Dani
+        :Date: 22/01/2023
+        :description: this function will check if the car can start the driving
+        :param km_to_drive:
+        :return: -
+        """
+        if self.status_engine == True:
+            if km_to_drive<=0:
+                raise ValueError(os.getenv('VALUE_ERROR5'))
+            elif km_to_drive > self.get_feul_per_km()*self.get_feul():
+                raise OverflowError(os.getenv('OVERFLOW_ERROR3'))
+            else:
+                self.set_gear(1)
+                self.set_fuel(self.get_fuel()-km_to_drive/self.get_feul_per_km())
+                self.stop_engine()
+        else:
+            raise ValueError(os.getenv('VALUE_ERROR3'))
+
 
     def fuel_to_buy(self, km):
         """
@@ -64,7 +106,7 @@ class Car:
          """
         if self.money == 0:
             raise ValueError(os.getenv('VALUE_ERROR1'))
-        elif self.money < ((km) // self.feulPerMile) * os.getenv('FEUL_PRICE'):
+        elif self.money < ((km) // self.feulPerMile) * int(os.getenv('FEUL_PRICE')):
             raise ValueError(os.getenv('VALUE_ERROR2'))
         else:
             x = (int(km) // self.feulPerMile) * os.getenv('FEUL_PRICE')
@@ -87,6 +129,6 @@ class Car:
             return feul_Per_mile_predicted <= self.feul
 
     def write_to_log(self, str):
-        f = open('C:/Users/danie/PycharmProjects/Car/CarLog.txt', "a")
+        f = open(os.getenv('PATHLOG'), "a")
         f.write(f"{str} {dt.datetime.now()}\n")
         f.close()
