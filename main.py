@@ -5,9 +5,11 @@ if __name__ == '__main__':
     try:
 
         car.start_engine()
-        car.if_drive_destination_is_posible(150)
+        car.if_drive_destination_is_posible(100)
         car.set_gear()
         car.stop_engine()
+        car.fill_gas()
+
 
     except ValueError as e:
         print(e)

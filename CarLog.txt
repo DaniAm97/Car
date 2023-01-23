@@ -377,3 +377,123 @@ Passed(test_set_gear): 2023-01-23 12:14:57.829370
 Failed (test_start_engine): None != True 2023-01-23 12:14:57.844979
 Passed(test_stop_engine):  2023-01-23 12:14:57.844979
 Passed(test_stop_engine): 2023-01-23 12:31:05.731279
+Passed(test_drive): 2023-01-23 13:26:34.359508
+Passed(test_drive): 2023-01-23 13:26:49.398903
+Passed(test_drive): 2023-01-23 13:28:52.235071
+Passed(test_drive): 2023-01-23 13:29:40.327585
+Passed(test_drive): 2023-01-23 13:29:51.475203
+Failed (test_drive): 1
+assert 0
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x00000150C4C8FFD0>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x00000150C4C8FFD0>> = <car.Car object at 0x00000150C4C8FFD0>.get_gear 2023-01-23 13:30:59.743029
+Failed (test_drive): 0
+assert 0
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x000001B8078D8490>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000001B8078D8490>> = <car.Car object at 0x000001B8078D8490>.get_gear 2023-01-23 13:31:31.319851
+Failed (test_drive): assert 0 == 49
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x0000020A8CC600D0>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x0000020A8CC600D0>> = <car.Car object at 0x0000020A8CC600D0>.get_gear 2023-01-23 13:34:02.822609
+Passed(test_drive): 2023-01-23 13:34:25.152576
+Failed (test_drive): assert 49.0 == 48
+ +  where 49.0 = <bound method Car.get_feul of <car.Car object at 0x00000138D17B0FA0>>()
+ +    where <bound method Car.get_feul of <car.Car object at 0x00000138D17B0FA0>> = <car.Car object at 0x00000138D17B0FA0>.get_feul 2023-01-23 13:34:34.255243
+Passed(test_drive): 2023-01-23 13:36:09.987105
+Failed (test_drive): assert 0 == 2
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x000001D8693ACA90>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000001D8693ACA90>> = <car.Car object at 0x000001D8693ACA90>.get_gear 2023-01-23 13:36:20.297408
+Passed(test_drive): 2023-01-23 13:41:17.364586
+Passed(test_drive): 2023-01-23 14:24:35.790720
+Passed(test_drive): 2023-01-23 14:27:58.662135
+Passed(test_drive): 2023-01-23 14:32:10.329547
+Failed (test_drive): assert 360 == 500
+ +  where 360 = <bound method Car.get_money of <car.Car object at 0x000001C7938D1F40>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000001C7938D1F40>> = <car.Car object at 0x000001C7938D1F40>.get_money 2023-01-23 14:32:48.227499
+Passed(test_drive): 2023-01-23 14:33:23.712079
+Passed(test_drive): 2023-01-23 14:39:19.318080
+Failed (test_drive): assert 360 == 500
+ +  where 360 = <bound method Car.get_money of <car.Car object at 0x00000225B4001910>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x00000225B4001910>> = <car.Car object at 0x00000225B4001910>.get_money 2023-01-23 14:39:45.396976
+passed filled the car 2023-01-23 14:54:15.137927
+passed filled the car 2023-01-23 14:57:32.692324
+Passed(test_drive): 2023-01-23 14:57:32.692324
+passed filled the car 2023-01-23 14:57:53.131164
+passed filled the car 2023-01-23 15:01:50.044655
+passed filled the car 2023-01-23 15:03:34.756942
+Passed(test_drive): 2023-01-23 15:03:34.756942
+passed filled the car 2023-01-23 15:06:04.773497
+passed filled the car 2023-01-23 15:07:33.278292
+Passed(test_drive): 2023-01-23 15:07:33.294070
+Failed (test_drive): assert 500 == 200
+ +  where 500 = <bound method Car.get_money of <car.Car object at 0x000001BE8DF3B790>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000001BE8DF3B790>> = <car.Car object at 0x000001BE8DF3B790>.get_money 2023-01-23 15:16:14.680705
+Failed (test_drive): assert 500 == 200
+ +  where 500 = <bound method Car.get_money of <car.Car object at 0x00000260B0A7FAC0>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x00000260B0A7FAC0>> = <car.Car object at 0x00000260B0A7FAC0>.get_money 2023-01-23 15:29:22.458162
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:39:13.665904
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:39:23.401824
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:41:36.766688
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:41:46.705286
+Failed (test_drive): assert 500 == 300
+ +  where 500 = <bound method Car.get_money of <car.Car object at 0x00000248C99318E0>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x00000248C99318E0>> = <car.Car object at 0x00000248C99318E0>.get_money 2023-01-23 15:47:06.386278
+Failed (test_drive): assert 290.0 == 300
+ +  where 290.0 = <bound method Car.get_money of <car.Car object at 0x000002B861665130>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000002B861665130>> = <car.Car object at 0x000002B861665130>.get_money 2023-01-23 15:47:46.547378
+passed filled the car 2023-01-23 15:53:25.821820
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:57:46.079285
+Failed (test_if_drive_destination_is_possible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000019BF07AE2E0>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000019BF07AE2E0>> = <car.Car object at 0x0000019BF07AE2E0>.if_drive_destination_is_posible 2023-01-23 15:58:10.616154
+Passed(test_fuel_to_buy): 2023-01-23 15:58:34.477392
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:59:06.635047
+set_gear() missing 1 required positional argument: 'gear' 2023-01-23 15:59:17.182512
+Passed(test_drive): 2023-01-23 16:00:54.701796
+passed filled the car 2023-01-23 16:01:23.843316
+passed filled the car 2023-01-23 16:04:49.916835
+Failed (test_drive): assert 290.0 == 300
+ +  where 290.0 = <bound method Car.get_money of <car.Car object at 0x000002647DC750D0>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000002647DC750D0>> = <car.Car object at 0x000002647DC750D0>.get_money 2023-01-23 16:05:06.901849
+Failed (test_drive): assert 353.0 == 360
+ +  where 353.0 = <bound method Car.get_money of <car.Car object at 0x000001B26F434220>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000001B26F434220>> = <car.Car object at 0x000001B26F434220>.get_money 2023-01-23 16:05:35.355040
+Passed(test_drive): 2023-01-23 16:05:59.949913
+Passed(test_drive): 2023-01-23 16:18:29.470225
+Passed(test_drive): 2023-01-23 16:18:42.173895
+Passed(test_drive): 2023-01-23 16:19:03.534118
+Passed(test_drive): 2023-01-23 16:19:19.862498
+Passed(test_drive): 2023-01-23 16:20:05.443132
+Passed(test_drive): 2023-01-23 16:20:54.991724
+passed filled the car 2023-01-23 16:22:07.369841
+Passed(test_drive): 2023-01-23 16:22:07.385466
+Passed(test_drive): 2023-01-23 16:22:47.558082
+Passed(test_drive): 2023-01-23 16:23:21.184176
+Passed(test_drive): 2023-01-23 16:29:41.534252
+Passed(test_drive): 2023-01-23 16:30:24.737987
+Passed(test_drive): 2023-01-23 16:31:06.755059
+Passed(test_drive): 2023-01-23 16:33:40.481566
+Failed (test_if_drive_destination_is_possible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000002A18A5B2AC0>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000002A18A5B2AC0>> = <car.Car object at 0x000002A18A5B2AC0>.if_drive_destination_is_posible 2023-01-23 16:33:54.904291
+Failed (test_if_drive_destination_is_possible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000021F588E10D0>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000021F588E10D0>> = <car.Car object at 0x0000021F588E10D0>.if_drive_destination_is_posible 2023-01-23 16:36:19.414581
+Passed(test_drive): 2023-01-23 16:36:44.463593
+Failed (test_drive): assert 29.0 == 0
+ +  where 29.0 = <bound method Car.get_feul of <car.Car object at 0x00000200B52EA100>>()
+ +    where <bound method Car.get_feul of <car.Car object at 0x00000200B52EA100>> = <car.Car object at 0x00000200B52EA100>.get_feul 2023-01-23 16:37:35.634898
+Passed(test_drive): 2023-01-23 16:38:56.248002
+Failed (test_drive): assert 0.0 == 1
+ +  where 0.0 = <bound method Car.get_feul of <car.Car object at 0x000001D36FC5A100>>()
+ +    where <bound method Car.get_feul of <car.Car object at 0x000001D36FC5A100>> = <car.Car object at 0x000001D36FC5A100>.get_feul 2023-01-23 16:39:18.797972
+Failed (test_drive): assert 20.0 == 10
+ +  where 20.0 = <bound method Car.get_feul of <car.Car object at 0x000002994CC90280>>()
+ +    where <bound method Car.get_feul of <car.Car object at 0x000002994CC90280>> = <car.Car object at 0x000002994CC90280>.get_feul 2023-01-23 16:41:14.602284
+Passed(test_drive): 2023-01-23 16:43:58.170205
+Passed(test_drive): 2023-01-23 16:44:57.377475
+Passed(test_drive): 2023-01-23 16:45:15.065584
+Failed (test_drive): assert 500 == 433
+ +  where 500 = <bound method Car.get_money of <car.Car object at 0x000002052D94A100>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000002052D94A100>> = <car.Car object at 0x000002052D94A100>.get_money 2023-01-23 16:45:39.769378
+Failed (test_drive): assert 290.0 == 433
+ +  where 290.0 = <bound method Car.get_money of <car.Car object at 0x000001834459F4C0>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000001834459F4C0>> = <car.Car object at 0x000001834459F4C0>.get_money 2023-01-23 16:45:59.863214

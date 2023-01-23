@@ -211,3 +211,50 @@ def test_if_drive_destination_is_possible_should_fail(car):
         car.write_to_log(f'Passed(test_if_drive_destination_is_posible_should_fail):')
     except AssertionError as ae:
         car.write_to_log(f'Failed (test_if_drive_destination_is_possible_should_fail): {ae}')
+
+def test_drive_gear(car):
+
+    try:
+        car.start_engine()
+        car.set_gear(3)
+        car.drive(20)
+        assert car.get_gear() == 0
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
+
+def test_drive_fuel(car):
+
+    try:
+        car.start_engine()
+        car.set_gear(3)
+        car.drive(200) # אני רוצה לנסוע 10 קמ יש לי 30 קמ דלק  קמ 1 זה  20
+        assert car.get_feul() == 20
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
+
+def test_drive_value_error(car):
+    try:
+        car.start_engine()
+        with pytest.raises(ValueError):
+            car.drive(-2)
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
+
+def test_drive_money_should_fail(car):
+    try:
+        car.start_engine()
+        car.drive(2000)
+        car.fill_gas()
+        assert car.get_money() ==433
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
+
+
+
+
+
+

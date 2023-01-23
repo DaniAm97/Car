@@ -64,5 +64,7 @@ class MyTestCase(unittest.TestCase):
             self.x.write_to_log(f'Failed (test_fuel_to_buy) : {ae}')
 
 
+
+
 if __name__ == '__main__':
     unittest.main()
