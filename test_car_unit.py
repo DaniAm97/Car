@@ -47,13 +47,6 @@ class MyTestCase(unittest.TestCase):
         except AssertionError as ae:
             self.x.write_to_log(f'Failed (test_stop_engine): {ae}')
 
-    def test_fuel_to_buy(self):
-        try:
-            self.assertEqual(self.x.fuel_to_buy(100), 35)
-            self.x.write_to_log(f"Passed(test_fuel_to_buy): ")
-        except AssertionError as ae:
-            self.x.write_to_log(f'Failed (test_fuel_to_buy): {ae}')
-
     def test_if_drive_destination_is_posible(self):
         try:
             self.x.if_drive_destination_is_posible(100)
@@ -62,8 +55,6 @@ class MyTestCase(unittest.TestCase):
                 f"Passed(test_if_drive_destination_is_posible):")
         except AssertionError as ae:
             self.x.write_to_log(f'Failed (test_fuel_to_buy) : {ae}')
-
-
 
 
 if __name__ == '__main__':

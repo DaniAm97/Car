@@ -265,7 +265,7 @@ def test_fill_fuel(car):
     """
      :name : Dani
      :date : 22/01/2023
-     :describe : the function calculate the total money that left
+     :describe : the function calculate the total money that left (money = 500 ,300*0.05*10 = 150 , 500-150 = 350 !)
      :param : int km
      :return :  -
      :test: pass

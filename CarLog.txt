@@ -516,3 +516,75 @@ Passed(test_drive): 2023-01-24 23:21:26.568792
 Failed (test_drive): assert 350.0 == 355
  +  where 350.0 = <bound method Car.get_money of <car.Car object at 0x0000018B697A14F0>>()
  +    where <bound method Car.get_money of <car.Car object at 0x0000018B697A14F0>> = <car.Car object at 0x0000018B697A14F0>.get_money 2023-01-24 23:24:51.701018
+Passed(test_start_engine): 2023-01-24 23:30:34.086247
+Failed (test_start_engine): assert True == False
+ +  where True = <car.Car object at 0x000001440DEBC160>.status_engine 2023-01-24 23:30:34.090250
+Passed(test_set_gear): 2023-01-24 23:30:34.093246
+Failed (test_set_gear): assert 2 == 3
+ +  where 2 = <bound method Car.get_gear of <car.Car object at 0x000001440DEBC280>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000001440DEBC280>> = <car.Car object at 0x000001440DEBC280>.get_gear 2023-01-24 23:30:34.095254
+Passed(test_get_gear): 2023-01-24 23:30:34.098249
+Failed (test_get_gear): assert 0 == 1
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x000001440DEBC8E0>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x000001440DEBC8E0>> = <car.Car object at 0x000001440DEBC8E0>.get_gear 2023-01-24 23:30:34.101248
+Passed(test_get_speed_car): 2023-01-24 23:30:34.103247
+Failed (test_get_speed_car): assert 60 == 70
+ +  where 60 = <bound method Car.get_car_speed of <car.Car object at 0x000001440DEBC340>>()
+ +    where <bound method Car.get_car_speed of <car.Car object at 0x000001440DEBC340>> = <car.Car object at 0x000001440DEBC340>.get_car_speed 2023-01-24 23:30:34.106248
+Passed(test_stop_engine): 2023-01-24 23:30:34.108248
+Failed (test_fuel_to_buy): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001440DEBC850>>(100)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001440DEBC850>> = <car.Car object at 0x000001440DEBC850>.if_drive_destination_is_posible 2023-01-24 23:30:34.113247
+Failed (test_if_drive_destination_is_possible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001440DEBC820>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x000001440DEBC820>> = <car.Car object at 0x000001440DEBC820>.if_drive_destination_is_posible 2023-01-24 23:30:34.118247
+Passed(test_drive): 2023-01-24 23:30:34.121246
+<ExceptionInfo OverflowError('U cant drive the car beacuse u dont have engouh fuel') tblen=2> 2023-01-24 23:30:34.123252
+<ExceptionInfo OverflowError('U cant drive the car beacuse u dont have engouh fuel') tblen=2> 2023-01-24 23:30:34.125259
+Passed(test_drive): 2023-01-24 23:30:34.127263
+Failed (test_drive): assert 350.0 == 355
+ +  where 350.0 = <bound method Car.get_money of <car.Car object at 0x000001440DE87E20>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x000001440DE87E20>> = <car.Car object at 0x000001440DE87E20>.get_money 2023-01-24 23:30:34.130253
+Passed(test_get_gear):  2023-01-24 23:30:34.235250
+Passed(test_get_speed_car): 2023-01-24 23:30:34.238251
+Failed (test_fuel_to_buy) : False != True 2023-01-24 23:30:34.240250
+Passed(test_set_gear): 2023-01-24 23:30:34.243251
+Failed (test_start_engine): None != True 2023-01-24 23:30:34.245251
+Passed(test_stop_engine):  2023-01-24 23:30:34.247250
+Passed(test_drive): 2023-01-24 23:30:58.774397
+Passed(test_start_engine): 2023-01-24 23:31:24.137445
+Failed (test_start_engine): assert True == False
+ +  where True = <car.Car object at 0x0000017E169B6160>.status_engine 2023-01-24 23:31:24.144446
+Passed(test_set_gear): 2023-01-24 23:31:24.147444
+Failed (test_set_gear): assert 2 == 3
+ +  where 2 = <bound method Car.get_gear of <car.Car object at 0x0000017E169BF370>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x0000017E169BF370>> = <car.Car object at 0x0000017E169BF370>.get_gear 2023-01-24 23:31:24.150447
+Passed(test_get_gear): 2023-01-24 23:31:24.152444
+Failed (test_get_gear): assert 0 == 1
+ +  where 0 = <bound method Car.get_gear of <car.Car object at 0x0000017E169BF370>>()
+ +    where <bound method Car.get_gear of <car.Car object at 0x0000017E169BF370>> = <car.Car object at 0x0000017E169BF370>.get_gear 2023-01-24 23:31:24.157447
+Passed(test_get_speed_car): 2023-01-24 23:31:24.160448
+Failed (test_get_speed_car): assert 60 == 70
+ +  where 60 = <bound method Car.get_car_speed of <car.Car object at 0x0000017E169BF4C0>>()
+ +    where <bound method Car.get_car_speed of <car.Car object at 0x0000017E169BF4C0>> = <car.Car object at 0x0000017E169BF4C0>.get_car_speed 2023-01-24 23:31:24.163447
+Passed(test_stop_engine): 2023-01-24 23:31:24.165453
+Failed (test_fuel_to_buy): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000017E169BFA60>>(100)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000017E169BFA60>> = <car.Car object at 0x0000017E169BFA60>.if_drive_destination_is_posible 2023-01-24 23:31:24.172446
+Failed (test_if_drive_destination_is_possible_should_fail): assert False == True
+ +  where False = <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000017E169BF970>>(1050)
+ +    where <bound method Car.if_drive_destination_is_posible of <car.Car object at 0x0000017E169BF970>> = <car.Car object at 0x0000017E169BF970>.if_drive_destination_is_posible 2023-01-24 23:31:24.175449
+Passed(test_drive): 2023-01-24 23:31:24.179444
+<ExceptionInfo OverflowError('U cant drive the car beacuse u dont have engouh fuel') tblen=2> 2023-01-24 23:31:24.182444
+<ExceptionInfo OverflowError('U cant drive the car beacuse u dont have engouh fuel') tblen=2> 2023-01-24 23:31:24.184444
+Passed(test_drive): 2023-01-24 23:31:24.189447
+Failed (test_drive): assert 350.0 == 355
+ +  where 350.0 = <bound method Car.get_money of <car.Car object at 0x0000017E169EE070>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x0000017E169EE070>> = <car.Car object at 0x0000017E169EE070>.get_money 2023-01-24 23:31:24.194445
+Passed(test_get_gear):  2023-01-24 23:31:24.294447
+Passed(test_get_speed_car): 2023-01-24 23:31:24.297446
+Failed (test_fuel_to_buy) : False != True 2023-01-24 23:31:24.300445
+Passed(test_set_gear): 2023-01-24 23:31:24.303444
+Failed (test_start_engine): None != True 2023-01-24 23:31:24.305444
+Passed(test_stop_engine):  2023-01-24 23:31:24.307444
+Failed (test_fuel_to_buy): 50 != 40 2023-01-24 23:39:27.166075
