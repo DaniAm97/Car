@@ -7,8 +7,8 @@ class Car:
     load_dotenv()
 
     def __init__(self):
-        self.feul = int(os.getenv('FEUL'))
-        self.feulPerMile = int(os.getenv('FEULPERMILE'))
+        self.fuel = int(os.getenv('FUEL'))
+        self.fuelPerKm = float(os.getenv('FUELPERKM'))
         self.money = int(os.getenv('MONEY'))
         self.gear = int(os.getenv('GEAR'))
         self.speed = int(os.getenv('SPEED'))
@@ -32,11 +32,12 @@ class Car:
     def get_status_engine(self):
         return self.status_engine
 
-    def set_fuel(self,fuel):
-        self.feul =fuel
+    def set_fuel(self, fuel):
+        self.fuel = fuel
 
     def get_fuel(self):
-        return self.feul
+        return self.fuel
+
     def get_money(self):
         return self.money
 
@@ -52,10 +53,7 @@ class Car:
         return self.gear
 
     def get_capacity(self):
-        return  self.capacity
-
-    def get_feul(self):
-        return self.feul
+        return self.capacity
 
     def get_car_speed(self):
         """
@@ -79,10 +77,11 @@ class Car:
         self.status_engine = False
         self.gear = 0
         self.speed = 0
-    def get_feul_per_km(self):
-        return self.feulPerMile
 
-    def drive(self,km_to_drive):
+    def get_fuel_per_km(self):
+        return self.fuelPerKm
+
+    def drive(self, km_to_drive):
         """
         :name: Dani
         :Date: 22/01/2023
@@ -90,36 +89,38 @@ class Car:
         :param km_to_drive:
         :return: -
         """
-# TODO
+        needed_fuel = km_to_drive * self.get_fuel_per_km()
         if self.status_engine == True:
-            if km_to_drive<1:
+            if km_to_drive <=0:
                 raise ValueError(os.getenv('VALUE_ERROR5'))
-            elif km_to_drive//20 > self.get_feul():
-                self.fill_gas(km_to_drive//20)
+            if needed_fuel > self.get_fuel():
+                self.fill_fuel(needed_fuel)
                 raise OverflowError(os.getenv('OVERFLOW_ERROR3'))
             else:
                 self.set_gear(1)
-                self.set_fuel(self.get_fuel()-km_to_drive/self.get_feul_per_km())
+                self.set_fuel(self.get_fuel()- (km_to_drive * self.get_fuel_per_km()))
                 self.stop_engine()
         else:
             raise ValueError(os.getenv('VALUE_ERROR3'))
 
-
-    def fill_gas(self):
+    def fill_fuel(self, liters_of_fuel):
         """
          :name : Dani
          :date : 22/01/20213
          :describe : the function fuel the car
          :param : self
-         :return : - the amount of money to pay for feul ac1orrding to the destntion
+         :return : - the amount of money to pay for fuel according to the destntion
          """
-        fuel_to_fill = self.get_capacity() - self.get_fuel()
-        amount_to_pay = fuel_to_fill * int(os.getenv('FEUL_PRICE'))
-        if self.get_money() < amount_to_pay:
-            raise OverflowError(os.getenv('OVERFLOW_ERROR4'))
+        fill_fuel = self.get_capacity() - self.get_fuel()
+        if(liters_of_fuel * int(os.getenv('FUEL_PRICE')) > self.get_money()):
+            raise OverflowError(os.getenv('OVERFLOW_ERROR5'))
+        if (liters_of_fuel > fill_fuel):
+            raise OverflowError(os.getenv('OVERFLOW_ERROR6'))
+
         else:
-            self.set_fuel(self.get_capacity())
-            self.money -= amount_to_pay
+            self.fuel += fill_fuel
+            self.money -= fill_fuel * int(os.getenv('FUEL_PRICE'))
+
 
     def if_drive_destination_is_posible(self, km_to_drive):
         """
@@ -134,8 +135,8 @@ class Car:
         if km_to_drive == 0:
             raise ValueError(os.getenv('VALUE_ERROR4'))
         else:
-            feul_Per_mile_predicted = (km_to_drive // self.feulPerMile)
-            return feul_Per_mile_predicted <= self.feul
+            fuel_Per_Km_predicted = (km_to_drive // self.fuelPerKm)
+            return fuel_Per_Km_predicted <= self.fuel
 
     def write_to_log(self, str):
         f = open(os.getenv('PATHLOG'), "a")

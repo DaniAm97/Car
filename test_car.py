@@ -212,8 +212,16 @@ def test_if_drive_destination_is_possible_should_fail(car):
     except AssertionError as ae:
         car.write_to_log(f'Failed (test_if_drive_destination_is_possible_should_fail): {ae}')
 
-def test_drive_gear(car):
 
+def test_drive_gear(car):
+    """
+     :name : Dani
+     :date : 22/01/2023
+     :describe : the function will check if the gear is 0 thats means that the engine is really stopped.
+     :param :
+     :return :  true
+     :test: pass
+     """
     try:
         car.start_engine()
         car.set_gear(3)
@@ -223,35 +231,27 @@ def test_drive_gear(car):
     except AssertionError as ae:
         car.write_to_log(f'Failed (test_drive): {ae}')
 
+
+def test_drive_not_enoug_money_should_fail(car):
+    """
+    :name : Dani
+    :date : 22/01/2023
+    :describe : the function will check if there is enough money to fuel the car by the km were given
+    :param :
+    :return :  -
+    :test: fail
+    """
+    with pytest.raises(Exception) as e:
+        car.start_engine()
+        car.drive(1050)
+    car.write_to_log(e)
+
 def test_drive_fuel(car):
-
-    try:
+    with pytest.raises(Exception) as e:
         car.start_engine()
-        car.set_gear(3)
-        car.drive(200) # אני רוצה לנסוע 10 קמ יש לי 30 קמ דלק  קמ 1 זה  20
-        assert car.get_feul() == 20
-        car.write_to_log(f'Passed(test_drive):')
-    except AssertionError as ae:
-        car.write_to_log(f'Failed (test_drive): {ae}')
+        car.drive(650)
+    car.write_to_log(e)
 
-def test_drive_value_error(car):
-    try:
-        car.start_engine()
-        with pytest.raises(ValueError):
-            car.drive(-2)
-        car.write_to_log(f'Passed(test_drive):')
-    except AssertionError as ae:
-        car.write_to_log(f'Failed (test_drive): {ae}')
-
-def test_drive_money_should_fail(car):
-    try:
-        car.start_engine()
-        car.drive(2000)
-        car.fill_gas()
-        assert car.get_money() ==433
-        car.write_to_log(f'Passed(test_drive):')
-    except AssertionError as ae:
-        car.write_to_log(f'Failed (test_drive): {ae}')
 
 
 

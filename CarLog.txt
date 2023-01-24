@@ -497,3 +497,10 @@ Failed (test_drive): assert 500 == 433
 Failed (test_drive): assert 290.0 == 433
  +  where 290.0 = <bound method Car.get_money of <car.Car object at 0x000001834459F4C0>>()
  +    where <bound method Car.get_money of <car.Car object at 0x000001834459F4C0>> = <car.Car object at 0x000001834459F4C0>.get_money 2023-01-23 16:45:59.863214
+Passed(test_drive): 2023-01-24 21:36:32.056360
+<class 'Exception'> 2023-01-24 21:56:54.107493
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 21:57:12.564652
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:00:05.201395
+<ExceptionInfo OverflowError('u dont have any money to fuel your car') tblen=3> 2023-01-24 22:06:55.403665
+<ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=3> 2023-01-24 22:08:19.414183
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:18:56.542889
