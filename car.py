@@ -91,19 +91,19 @@ class Car:
         """
         needed_fuel = km_to_drive * self.get_fuel_per_km()
         if self.status_engine == True:
-            if km_to_drive <=0:
+            if km_to_drive <= 0:
                 raise ValueError(os.getenv('VALUE_ERROR5'))
             if needed_fuel > self.get_fuel():
                 self.fill_fuel(needed_fuel)
                 raise OverflowError(os.getenv('OVERFLOW_ERROR3'))
             else:
                 self.set_gear(1)
-                self.set_fuel(self.get_fuel()- (km_to_drive * self.get_fuel_per_km()))
+                self.fuel -= km_to_drive * self.get_fuel_per_km()
                 self.stop_engine()
         else:
             raise ValueError(os.getenv('VALUE_ERROR3'))
 
-    def fill_fuel(self, liters_of_fuel):
+    def fill_fuel(self, km):
         """
          :name : Dani
          :date : 22/01/20213
@@ -112,15 +112,13 @@ class Car:
          :return : - the amount of money to pay for fuel according to the destntion
          """
         fill_fuel = self.get_capacity() - self.get_fuel()
-        if(liters_of_fuel * int(os.getenv('FUEL_PRICE')) > self.get_money()):
+        if ((km * self.get_fuel_per_km()) * int(os.getenv('FUEL_PRICE')) > self.get_money()):
             raise OverflowError(os.getenv('OVERFLOW_ERROR5'))
-        if (liters_of_fuel > fill_fuel):
+        if ((km * self.get_fuel_per_km()) > fill_fuel):
             raise OverflowError(os.getenv('OVERFLOW_ERROR6'))
-
         else:
             self.fuel += fill_fuel
-            self.money -= fill_fuel * int(os.getenv('FUEL_PRICE'))
-
+            self.money -= (km * self.get_fuel_per_km()) * int(os.getenv('FUEL_PRICE'))
 
     def if_drive_destination_is_posible(self, km_to_drive):
         """

@@ -504,3 +504,15 @@ Passed(test_drive): 2023-01-24 21:36:32.056360
 <ExceptionInfo OverflowError('u dont have any money to fuel your car') tblen=3> 2023-01-24 22:06:55.403665
 <ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=3> 2023-01-24 22:08:19.414183
 <ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:18:56.542889
+<ExceptionInfo TypeError("fill_fuel() missing 1 required positional argument: 'liters_of_fuel'") tblen=2> 2023-01-24 22:27:17.963639
+<ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=2> 2023-01-24 22:28:52.585654
+<ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=3> 2023-01-24 22:35:19.340980
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:41:11.046936
+<ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=3> 2023-01-24 22:47:24.127308
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:51:15.969359
+<ExceptionInfo OverflowError('you trying to over refuel your car') tblen=3> 2023-01-24 22:59:01.596453
+<ExceptionInfo OverflowError('u dont have enough money to fuel your car') tblen=3> 2023-01-24 22:59:48.348239
+Passed(test_drive): 2023-01-24 23:21:26.568792
+Failed (test_drive): assert 350.0 == 355
+ +  where 350.0 = <bound method Car.get_money of <car.Car object at 0x0000018B697A14F0>>()
+ +    where <bound method Car.get_money of <car.Car object at 0x0000018B697A14F0>> = <car.Car object at 0x0000018B697A14F0>.get_money 2023-01-24 23:24:51.701018

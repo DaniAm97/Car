@@ -34,7 +34,7 @@ def test_start_engine_should_fail(car):
     :param : -
     :return : -
     :test: fail
-       """
+    """
     try:
         car.start_engine()
         assert car.get_gear() == 0
@@ -103,7 +103,6 @@ def test_get_gear_shoud_fail(car):
       :return : - int- 0,1,2,3,4,5,6
       :test: fail
       """
-
     try:
         assert car.get_gear() == 1
         car.write_to_log(f'Passed(test_get_gear):')
@@ -217,11 +216,11 @@ def test_drive_gear(car):
     """
      :name : Dani
      :date : 22/01/2023
-     :describe : the function will check if the gear is 0 thats means that the engine is really stopped.
+     :describe : the function will check if the gear is 0 thats means that the engine is stopped.
      :param :
      :return :  true
      :test: pass
-     """
+    """
     try:
         car.start_engine()
         car.set_gear(3)
@@ -243,18 +242,57 @@ def test_drive_not_enoug_money_should_fail(car):
     """
     with pytest.raises(Exception) as e:
         car.start_engine()
-        car.drive(1050)
+        car.drive(1050)  # 1000*0.05*10 = 500 <,1050 = 525 not enough cash
     car.write_to_log(e)
 
-def test_drive_fuel(car):
+
+def test_drive_fuel_should_fail(car):
+    """
+   :name : Dani
+   :date : 22/01/2023
+   :describe : the function will check over refuel
+   :param :
+   :return :  -
+   :test: fail
+   """
     with pytest.raises(Exception) as e:
         car.start_engine()
-        car.drive(650)
+        car.drive(650)  # 600 * 0.05 = 30 capacity = 50 current fuel = 30 <650 Over refuel
     car.write_to_log(e)
 
 
+def test_fill_fuel(car):
+    """
+     :name : Dani
+     :date : 22/01/2023
+     :describe : the function calculate the total money that left
+     :param : int km
+     :return :  -
+     :test: pass
+     """
+
+    try:
+        car.start_engine()
+        car.fill_fuel(300)
+        assert car.get_money() == 350
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
 
 
-
-
-
+def test_fill_fuel_should_fail(car):
+    """
+     :name : Dani
+     :date : 22/01/2023
+     :describe : the function calculate the total money that left inserting wrong value
+     :param : int km
+     :return :  -
+     :test: fail
+     """
+    try:
+        car.start_engine()
+        car.fill_fuel(300)
+        assert car.get_money() == 355
+        car.write_to_log(f'Passed(test_drive):')
+    except AssertionError as ae:
+        car.write_to_log(f'Failed (test_drive): {ae}')
